@@ -1,0 +1,20 @@
+/* Specific status styles for Sewa */
+.data-cell.status-aktif strong {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.data-cell.status-selesai strong {
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.data-cell.status-dibatalkan strong {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.data-cell.status-menunggu-pembayaran strong {
+    color: #ffc107;
+    font-weight: 600;
+}

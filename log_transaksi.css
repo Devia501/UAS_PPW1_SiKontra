@@ -1,0 +1,74 @@
+/* Add these new rules to your existing style.css */
+
+/* Generic styling for status badges for consistency across all pages */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase; /* Ensure consistency */
+    white-space: nowrap; /* Prevent wrapping for small statuses */
+    min-width: 90px; /* Adjust as needed for consistent button-like appearance */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Colors for Sewa statuses (as they might appear in logs from sewa table statuses) */
+.status-aktif {
+    background-color: #d4edda; /* Light green background */
+    color: #28a745; /* Dark green text */
+}
+
+.status-selesai {
+    background-color: #e2e3e5; /* Light grey background */
+    color: #6c757d; /* Dark grey text */
+}
+
+.status-dibatalkan {
+    background-color: #f8d7da; /* Light red background */
+    color: #dc3545; /* Dark red text */
+}
+
+.status-menunggu-pembayaran {
+    background-color: #fff3cd; /* Light yellow background */
+    color: #ffc107; /* Dark yellow/orange text */
+}
+
+/* Colors for Unit statuses (as they might appear in logs from unit table statuses) */
+.status-tersedia {
+    background-color: #d1ecf1; /* Light blue background */
+    color: #17a2b8; /* Dark blue text */
+}
+
+.status-terisi {
+    background-color: #cce5ff; /* Lighter blue background */
+    color: #007bff; /* Darker blue text */
+}
+
+.status-dalam-perbaikan {
+    background-color: #e2e3e5; /* Light grey background */
+    color: #6c757d; /* Dark grey text */
+}
+
+/* Ensure the existing transaction statuses are also correct for logs (they should match your existing .status-Lunas, etc. but with the lowercase, hyphenated class names) */
+/* (Your existing .status-Lunas, .status-Pending, .status-Gagal already use these colors but are defined with uppercase letters. The PHP uses lowercase, so we need matching lowercase definitions or adjust the PHP to use exact case).
+   The most robust solution is to define for both, or ensure PHP's string replacement is consistent.
+   Since the PHP is already doing `strtolower` and `str_replace(' ', '-')`,
+   these exact class names will be generated. The existing CSS targets `.status-Lunas`, etc. directly.
+   So, we need to add the lowercase version: */
+
+.status-lunas { /* Transaksi */
+    background-color: #d4edda;
+    color: #28a745;
+}
+
+.status-pending { /* Transaksi */
+    background-color: #fff3cd;
+    color: #ffc107;
+}
+
+.status-gagal { /* Transaksi */
+    background-color: #f8d7da;
+    color: #dc3545;
+}

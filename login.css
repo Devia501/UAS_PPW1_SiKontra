@@ -1,0 +1,248 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    background: linear-gradient(135deg, #E3EEB2, #c9dea0); /* Soft gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden; /* Prevent scrollbar if elements slightly overflow */
+}
+
+/* Overall login container for a card-like effect */
+.login-container {
+    background: linear-gradient(135deg, #71C0BB, #5a9b96); /* Teal gradient border */
+    padding: 10px; /* Thicker "border" for the gradient effect */
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+    max-width: 420px; /* Slightly larger for better feel */
+    width: 90%; /* Responsive width */
+    box-sizing: border-box;
+    animation: fadeInScale 0.6s ease-out; /* Add animation */
+}
+
+/* Animation for the login box */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.login-box {
+    background-color: #FFFFFF;
+    border-radius: 10px; /* Match outer container's border-radius - padding */
+    overflow: hidden;
+}
+
+.login-header {
+    background: linear-gradient(135deg, #332D56, #2a2447); /* Dark purple gradient */
+    padding: 35px 30px; /* More padding for a grander header */
+    text-align: center;
+    border-bottom: 5px solid #71C0BB; /* A subtle accent line */
+}
+
+.login-header h2 {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 2.2em; /* Larger, more prominent title */
+    font-weight: 700; /* Bolder font weight */
+    letter-spacing: 1px; /* Slightly spaced out letters */
+}
+
+.login-body {
+    padding: 30px 40px; /* More horizontal padding */
+    background-color: #FFFFFF;
+}
+
+.error-message {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red text */
+    padding: 12px 15px;
+    border-radius: 8px; /* Slightly softer corners */
+    margin-bottom: 25px; /* More space below message */
+    text-align: center;
+    font-size: 0.95em;
+    font-weight: 500;
+    border: 1px solid #dc3545; /* Red border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    animation: slideDown 0.4s ease-out; /* Animation for error message */
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px; /* More space between input groups */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px 14px 50px; /* More padding for text, larger space for icon */
+    border: 2px solid #e9ecef; /* Slightly thicker, softer border */
+    border-radius: 10px; /* More rounded input fields */
+    font-size: 1.05em; /* Slightly larger text in inputs */
+    background-color: #fafbfc; /* Very light gray background */
+    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Smooth transitions for focus */
+}
+
+.input-group input::placeholder {
+    color: #a0a0a0; /* Softer placeholder color */
+    font-style: italic;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #71C0BB; /* Teal border on focus */
+    background-color: white; /* White background on focus */
+    box-shadow: 0 0 0 4px rgba(113, 192, 187, 0.2); /* Teal glow on focus */
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 18px; /* Position icon further from edge */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #71C0BB; /* Teal icon color */
+    font-size: 1.2em; /* Slightly larger icon */
+}
+
+.login-button {
+    background: linear-gradient(135deg, #5D7FA3, #4a6b8a); /* Blue gradient button */
+    color: #FFFFFF;
+    padding: 15px 25px; /* Larger padding for a more clickable button */
+    border: none;
+    border-radius: 10px; /* Match input field rounding */
+    font-size: 1.15em; /* Larger font size */
+    font-weight: 600; /* Bolder text */
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 6px 15px rgba(93, 127, 163, 0.3); /* Button shadow */
+}
+
+.login-button:hover {
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 0 9px 20px rgba(93, 127, 163, 0.4); /* Enhanced shadow on hover */
+    background: linear-gradient(135deg, #4a6b8a, #5D7FA3); /* Subtle gradient shift on hover */
+}
+
+.login-button i {
+    font-size: 1em; /* Adjust icon size if needed */
+}
+
+.forgot-password {
+    text-align: center;
+    font-size: 0.95em;
+}
+
+/* Add this to your existing login.css */
+
+.input-group .password-toggle {
+    position: absolute;
+    right: 15px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999; /* Neutral color, can be teal like other icons */
+    font-size: 1em; /* Adjust size to fit */
+    z-index: 10; /* Ensure it's above the input field */
+    transition: color 0.3s ease;
+}
+
+.input-group .password-toggle:hover {
+    color: #71C0BB; /* Teal on hover */
+}
+
+/* You might need to adjust the input padding if the icon overlaps */
+.input-group input {
+    /* ... existing styles ... */
+    padding-right: 45px; /* Make space for the eye icon to prevent overlap */
+}
+
+.forgot-password a {
+    color: #5D7FA3; /* Match button color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #332D56; /* Darker on hover */
+    text-decoration: underline;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555; /* Slightly darker for better readability */
+    font-size: 0.85em;
+    text-align: center;
+    padding: 0 10px; /* Add some horizontal padding */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .login-header {
+        padding: 25px 20px;
+    }
+
+    .login-header h2 {
+        font-size: 1.8em;
+    }
+
+    .login-body {
+        padding: 25px 25px;
+    }
+
+    .error-message {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .input-group input {
+        padding: 12px 15px 12px 45px;
+        font-size: 0.95em;
+    }
+
+    .input-group .icon {
+        left: 15px;
+        font-size: 1.1em;
+    }
+
+    .login-button {
+        padding: 12px 20px;
+        font-size: 1.05em;
+        gap: 8px;
+    }
+
+    .copyright {
+        font-size: 0.8em;
+        bottom: 15px;
+    }
+}

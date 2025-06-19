@@ -1,0 +1,15 @@
+/* Specific status styles for Unit */
+.data-cell.status-tersedia strong {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.data-cell.status-terisi strong {
+    color: #ffc107;
+    font-weight: 600;
+}
+
+.data-cell.status-dalam-perbaikan strong {
+    color: #007bff;
+    font-weight: 600;
+}
